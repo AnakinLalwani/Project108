@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Hand Symbols To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class="btn btn-danger heading">HAND SYMBOLS TO EMOJI
+        <br>
+        <span>&#9996;</span>
+        <span>&#128400;</span>
+        <span>&#128076;</span>
+        <span>&#128077;</span>
+        <span>&#128078;</span>
+      </h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br>
+        <b style="color: rgb(104, 206, 57)">Thumbs Up</b>
+        <br>
+        <b style="color: rgb(48, 65, 212)">Thumbs Down</b>
+        <br>
+        <b style="color: red">Nice</b>
+        <br>
+        <b style="color: rgb(104, 206, 57)">Victory</b>
+        <br>
+        <b style="color: rgb(48, 65, 212)">High-Five</b>
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam - </label>
+        <div id="camera"></div>
+        <br><br>
+        <button onclick="take_snapshot()" class="btn btn-danger">Take Picture</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Prediction 1 - </label>
+        <p id="result_emotion_name" class="emotion_name"></p>
+        <p class="emoji" id="updated_emoji"></p>
+
+        <br><br>
+
+        <label>Prediction 2 - </label>
+        <p id="result_emotion_name2" class="emotion_name"></p>
+        <p class="emoji" id="updated_emoji2"></p>
+      </div>
+
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check()" class="btn btn-success">Check Hand Symbol</button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+<!--https://teachablemachine.withgoogle.com/models/xsCTIkpT1/-->
